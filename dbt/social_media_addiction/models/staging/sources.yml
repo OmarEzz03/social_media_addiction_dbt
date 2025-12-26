@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: BRONZE
+    schema: SOCIAL_MEDIA_ADDICTION
+    tables:
+      - name: STUDENTS SOCIAL MEDIA ADDICTION
+        quoting: 
+          identifier: true

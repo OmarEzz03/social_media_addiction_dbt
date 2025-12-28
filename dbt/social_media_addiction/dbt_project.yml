@@ -36,5 +36,5 @@ models:
       +materialized: view
     staging:
       +materialized: view
-    # silver: 
-    #   +materialized: table
+    SILVER: 
+      +materialized: table

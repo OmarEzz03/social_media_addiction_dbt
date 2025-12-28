@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_students_survey
+    columns:
+      - name: student_id
+        tests:
+          - not_null
+          - unique
+
+      - name: age
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 16
+                max_value: 25
+                inclusive: true
+
+      - name: mental_health_score
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 1
+                max_value: 10
+                inclusive: true
+
+      - name: addicted_score
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 1
+                max_value: 10
+                inclusive: true
+
+      - name: sleep_hours_per_night
+        tests:
+          - not_null
+
+      - name: conflicts_over_social_media
+        tests:
+          - not_null
+
+      - name: affects_academic_performance
+        tests:
+          - not_null
+
+      - name: avg_daily_usage_hours
+        tests:
+          - not_null

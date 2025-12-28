@@ -32,9 +32,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   social_media_addiction:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
     staging:
       +materialized: view
-    SILVER: 
+    SILVER:
+      +database: SILVER
+      +schema: SOCIAL_MEDIA_ADDICTION
+      +materialized: table
+    GOLD: 
+      +database: GOLD
+      +schema: SOCIAL_MEDIA_ADDICTION
       +materialized: table

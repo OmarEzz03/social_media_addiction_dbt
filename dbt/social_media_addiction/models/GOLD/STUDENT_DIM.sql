@@ -4,6 +4,7 @@ WITH source AS (
 ), 
 transformed AS (
     SELECT
+        {{ dbt_utils.generate_surrogate_key(['student_id']) }} AS student_key,
         student_id,
         age,
         gender,

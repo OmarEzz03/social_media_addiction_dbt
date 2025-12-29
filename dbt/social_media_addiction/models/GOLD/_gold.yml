@@ -30,3 +30,61 @@ models:
         tests:
           - not_null
           - unique
+  - name: Fact_STUDENTS_SURVEY
+    description: >
+      Fact table at grain of one survey response per student.
+      Measures are self-reported usage, sleep, and well-being indicators.
+
+    columns:
+      - name: student_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_student')
+              field: student_sk
+
+      - name: platform_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_platform')
+              field: platform_sk
+
+      - name: date_sk
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_sk
+
+      - name: avg_daily_usage_hours
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
+              max_value: 24
+
+      - name: sleep_hours_per_night
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 0
+              max_value: 24
+
+      - name: mental_health_score
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 1
+              max_value: 10
+
+      - name: addicted_score
+        tests:
+          - not_null
+          - accepted_range:
+              min_value: 1
+              max_value: 10
+
+      - name: affects_academic_performance
+        tests:
+          - not_null

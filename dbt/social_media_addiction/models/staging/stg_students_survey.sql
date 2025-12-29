@@ -17,7 +17,7 @@ renamed AS (
         TRY_CAST(mental_health_score AS INT)            AS mental_health_score,
         TRY_CAST(conflicts_over_social_media AS INT)    AS conflicts_over_social_media,
         TRY_CAST(addicted_score AS INT)                 AS addicted_score,
-        _AIRBYTE_EXTRACTED_AT::timestamp          AS extracted_at -- Replace once true survey_date becomes available
+        _AIRBYTE_EXTRACTED_AT::date                     AS extracted_at -- Replace once true survey_date becomes available
     FROM source
 )
 

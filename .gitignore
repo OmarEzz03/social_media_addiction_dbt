@@ -310,3 +310,6 @@ exponent.txt
 .claude/.local
 
 .workstack
+
+*.pbix
+powerbi/

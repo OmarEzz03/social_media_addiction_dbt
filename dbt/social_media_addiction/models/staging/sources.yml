@@ -5,6 +5,4 @@ sources:
     database: BRONZE
     schema: SOCIAL_MEDIA_ADDICTION
     tables:
-      - name: STUDENTS SOCIAL MEDIA ADDICTION
-        quoting: 
-          identifier: true
+      - name: STUDENTS_SOCIAL_MEDIA_ADDICTION

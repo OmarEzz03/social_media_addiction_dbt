@@ -1,6 +1,6 @@
 WITH source AS (
     SELECT * 
-    FROM {{ source('bronze', 'STUDENTS SOCIAL MEDIA ADDICTION') }}
+    FROM {{ source('bronze', 'STUDENTS_SOCIAL_MEDIA_ADDICTION') }}
 ), 
 renamed AS (
     SELECT

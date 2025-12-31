@@ -30,7 +30,7 @@ models:
         tests:
           - not_null
           - unique
-  - name: Fact_STUDENTS_SURVEY
+  - name: FACT_STUDENTS_SURVEY
     description: >
       Fact table at grain of one survey response per student.
       Measures are self-reported usage, sleep, and well-being indicators.

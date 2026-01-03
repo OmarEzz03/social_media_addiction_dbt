@@ -312,6 +312,6 @@ exponent.txt
 .workstack
 
 *.pbix
-powerbi/
+powerbi_project/
 
 screenshots/
